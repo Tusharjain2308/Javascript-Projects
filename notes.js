@@ -399,3 +399,17 @@ console.log(mytotal);
 //57. HTML collection needs to be converted to array to enable looping on it 
 // Array.from(element/variable to be converted to array)
 
+//58. Events in JS - triggers on activity in browser (event bubbling and event capturing) 
+// event bubbling - event propogates from bottom to up and so r the events executed from smaller parents to bigger parents 
+// event capturing - event propogates from top to bottom and so r the events executed from bigger parents to smaller parents
+// however we can stop this propogation(bubbling) of events by using -- e.stopPropagation() where e is an event object 
+// for eg : 
+document.getElementById('owl').addEventListener('click',function(e) {
+    console.log('owl clicked');
+    e.stopPropagation();
+},false) 
+
+//wherease the false is default value and when true it means even capturing will take place
+//also there is a e.preventDefault() functionality via which we can stop the default behaviour of any function or element
+
+
